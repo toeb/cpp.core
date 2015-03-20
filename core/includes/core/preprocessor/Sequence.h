@@ -1,0 +1,29 @@
+#pragma once
+
+#include <core/preprocessor/Basic.h>
+
+
+#define DS_SEQUENCE_0  0
+#define DS_SEQUENCE_1   DS_SEQUENCE_0  , 1  
+#define DS_SEQUENCE_2   DS_SEQUENCE_1  , 2  
+#define DS_SEQUENCE_3   DS_SEQUENCE_2  , 3  
+#define DS_SEQUENCE_4   DS_SEQUENCE_3  , 4  
+#define DS_SEQUENCE_5   DS_SEQUENCE_4  , 5  
+#define DS_SEQUENCE_6   DS_SEQUENCE_5  , 6  
+#define DS_SEQUENCE_7   DS_SEQUENCE_6  , 7  
+#define DS_SEQUENCE_8   DS_SEQUENCE_7  , 8  
+#define DS_SEQUENCE_9   DS_SEQUENCE_8  , 9  
+#define DS_SEQUENCE_10  DS_SEQUENCE_9  , 10 
+#define DS_SEQUENCE_11  DS_SEQUENCE_10 , 11 
+#define DS_SEQUENCE_12  DS_SEQUENCE_11 , 12 
+#define DS_SEQUENCE_13  DS_SEQUENCE_12 , 13 
+#define DS_SEQUENCE_14  DS_SEQUENCE_13 , 14 
+#define DS_SEQUENCE_15  DS_SEQUENCE_14 , 15 
+#define DS_SEQUENCE_16  DS_SEQUENCE_15 , 16 
+#define DS_SEQUENCE_17  DS_SEQUENCE_16 , 17 
+#define DS_SEQUENCE_18  DS_SEQUENCE_17 , 18 
+
+
+#define DS_SEQUENCE(N) DS_CONCAT(DS_SEQUENCE_,N)
+
+

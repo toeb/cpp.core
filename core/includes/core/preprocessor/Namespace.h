@@ -1,0 +1,14 @@
+#pragma once
+#include <core/preprocessor/Reduce.h>
+
+#define DS_NAMESPACE_PREPEND_NAMESPACE(X) namespace X {
+#define DS_NAMESPACE_APPEND_NAMESPACE(X) }
+#define DS_NAMESPACE_BEGIN(...) DS_REDUCE(DS_NAMESPACE_PREPEND_NAMESPACE, , __VA_ARGS__)
+#define DS_NAMESPACE_END(...) DS_REDUCE(DS_NAMESPACE_APPEND_NAMESPACE, ,__VA_ARGS__)
+#define DS_NAMESPACE(...) DS_REDUCE(DS_NOOP, ::, __VA_ARGS__)
+#define DS_NAMESPACE_USE(...) using namespace DS_NAMESPACE(__VA_ARGS__)
+
+#define NS(...) DS_NAMESPACE(__VA_ARGS__)
+#define NS_BEGIN(...)DS_NAMESPACE_BEGIN(__VA_ARGS__)
+#define NS_END(...) DS_NAMESPACE_END(__VA_ARGS__)
+#define NS_USE(...) DS_NAMESPACE_USE(__VA_ARGS__)
